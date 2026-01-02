@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Internal CSS -->
     <style>
         h2 {
             text-align: center;
@@ -21,25 +22,21 @@
     <section class="form-section">
         <h2>Register Here</h2>
 
-        <form>
+        <!-- Form goes directly to payment page -->
+        <form action="payment.html">
             <label>Name:</label><br>
-            <input type="text"><br><br>
+            <input type="text" required><br><br>
 
             <label>Email:</label><br>
-            <input type="email"><br><br>
+            <input type="email" required><br><br>
 
             <label>Department:</label><br>
-            <input type="text"><br><br>
+            <input type="text" required><br><br>
 
-            <!-- Inline CSS -->
-            <input type="submit" value="Register"
-                   style="background-color: green; color: white;">
+            <!-- Only Proceed Button -->
+            <input type="submit" value="Proceed to Payment"
+                   style="background-color: green; color: white; padding: 10px 20px;">
         </form>
-
-        <br>
-
-        <!-- Sequential Navigation -->
-        <a href="payment.html">➡ Proceed to Payment</a>
     </section>
 
 </body>
