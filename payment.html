@@ -12,8 +12,18 @@
             color: darkgreen;
         }
 
+        /* Payment box */
+        .payment-box {
+            border: 2px solid darkgreen;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px auto;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
         .payment-option {
-            margin: 8px 0;
+            margin: 10px 0;
             font-size: 16px;
         }
 
@@ -31,11 +41,12 @@
             background-color: green;
         }
 
+        /* Success message */
         #successMsg {
             display: none;
             margin-top: 20px;
             font-weight: bold;
-            color: green;
+            color: black; /* changed to black */
             text-align: center;
         }
     </style>
@@ -49,19 +60,21 @@
     <section class="payment-section">
         <h2>Select Payment Method</h2>
 
-        <!-- Payment Options -->
+        <!-- Payment Options Box -->
         <form onsubmit="showSuccess(event)">
-            <div class="payment-option">
-                <input type="radio" name="payment" required> UPI
-            </div>
-            <div class="payment-option">
-                <input type="radio" name="payment"> Debit Card
-            </div>
-            <div class="payment-option">
-                <input type="radio" name="payment"> Credit Card
-            </div>
-            <div class="payment-option">
-                <input type="radio" name="payment"> Net Banking
+            <div class="payment-box">
+                <div class="payment-option">
+                    <input type="radio" name="payment" required> UPI
+                </div>
+                <div class="payment-option">
+                    <input type="radio" name="payment"> Debit Card
+                </div>
+                <div class="payment-option">
+                    <input type="radio" name="payment"> Credit Card
+                </div>
+                <div class="payment-option">
+                    <input type="radio" name="payment"> Net Banking
+                </div>
             </div>
 
             <!-- Inline CSS -->
@@ -82,7 +95,7 @@
     <!-- JavaScript -->
     <script>
         function showSuccess(event) {
-            event.preventDefault(); // Stop page reload
+            event.preventDefault();
             document.getElementById("successMsg").style.display = "block";
         }
     </script>
