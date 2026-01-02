@@ -12,48 +12,80 @@
             color: darkgreen;
         }
 
+        .payment-option {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
         .pay-btn {
-            padding: 12px 30px;
+            padding: 12px 25px;
             background-color: darkgreen;
             color: white;
             font-size: 16px;
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
         }
 
         .pay-btn:hover {
             background-color: green;
+        }
+
+        #successMsg {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
     <header id="mainHeader">
-        <h1>Payment Details</h1>
+        <h1>Payment Page</h1>
     </header>
 
     <section class="payment-section">
         <h2>Select Payment Method</h2>
 
-        <ol class="payment-list">
-            <li>UPI</li>
-            <li>Debit Card</li>
-            <li>Credit Card</li>
-            <li>Net Banking</li>
-        </ol>
+        <!-- Payment Options -->
+        <form onsubmit="showSuccess(event)">
+            <div class="payment-option">
+                <input type="radio" name="payment" required> UPI
+            </div>
+            <div class="payment-option">
+                <input type="radio" name="payment"> Debit Card
+            </div>
+            <div class="payment-option">
+                <input type="radio" name="payment"> Credit Card
+            </div>
+            <div class="payment-option">
+                <input type="radio" name="payment"> Net Banking
+            </div>
 
-        <p style="color: yellow; font-weight: bold; text-align: center;">
-            Registration Fee: ₹500
-        </p>
+            <!-- Inline CSS -->
+            <p style="font-weight: bold; color: yellow; text-align: center;">
+                Registration Fee: ₹500
+            </p>
 
-        <!-- PAY BUTTON -->
-        <form action="success.html" style="text-align: center;">
-            <button type="submit" class="pay-btn">Pay Now</button>
+            <!-- Pay Button -->
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit" class="pay-btn">Pay Now</button>
+            </div>
         </form>
+
+        <!-- Success Message -->
+        <p id="successMsg">✅ Payment Successful! Registration Completed.</p>
     </section>
+
+    <!-- JavaScript -->
+    <script>
+        function showSuccess(event) {
+            event.preventDefault(); // Stop page reload
+            document.getElementById("successMsg").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
-
