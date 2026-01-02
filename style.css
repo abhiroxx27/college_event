@@ -1,43 +1,127 @@
-/* Element Selector */
+/* Reset & base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Verdana, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* ID Selector */
+/* Main container effect */
+section {
+    background: white;
+    width: 80%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Header styling */
 #mainHeader {
-    background-color: lightblue;
-    padding: 15px;
-}
-
-/* Class Selector */
-.content {
-    padding: 20px;
-}
-
-/* Background color section */
-.form-section {
-    background-color: #fff3cd;
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Background image section */
-.payment-section {
-    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
-    background-size: cover;
+    background: linear-gradient(to right, #667eea, #764ba2);
     color: white;
     padding: 20px;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 20px;
 }
 
-/* List Styling */
-.event-list, .payment-list {
-    color: darkslategray;
+h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Sub headings */
+h2 {
+    margin: 15px 0;
+    color: #444;
+}
+
+/* Paragraph text */
+p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Lists */
+.event-list,
+.payment-list {
+    list-style-position: inside;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.event-list li,
+.payment-list li {
+    background: #f0f4ff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
     font-size: 15px;
 }
 
+/* Buttons */
+input[type="submit"],
 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
     text-decoration: none;
-    color: blue;
+    border-radius: 25px;
     font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Background sections */
+.form-section {
+    background: #fff8e1;
+}
+
+.payment-section {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
