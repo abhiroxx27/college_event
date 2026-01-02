@@ -3,12 +3,29 @@
 <head>
     <title>Payment Page</title>
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Internal CSS -->
     <style>
         h2 {
             text-align: center;
             color: darkgreen;
+        }
+
+        .pay-btn {
+            padding: 12px 30px;
+            background-color: darkgreen;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .pay-btn:hover {
+            background-color: green;
         }
     </style>
 </head>
@@ -22,18 +39,28 @@
         <h2>Select Payment Method</h2>
 
         <ol class="payment-list">
-            <li> >UPI</li>
-            <li> >Debit Card</li>
-            <li> >Credit Card</li>
-            <li> >Net Banking</li>
+            <li>UPI</li>
+            <li>Debit Card</li>
+            <li>Credit Card</li>
+            <li>Net Banking</li>
         </ol>
 
-        <p style="color: yellow; font-weight: bold;">
+        <!-- Inline CSS -->
+        <p style="color: yellow; font-weight: bold; text-align: center;">
             Registration Fee: ₹500
         </p>
 
-        <!-- End of sequence -->
-        <a href="index.html">⬅ Back to Home</a>
+        <!-- PAY BUTTON -->
+        <div style="text-align: center;">
+            <button class="pay-btn">Pay Now</button>
+        </div>
+
+        <br>
+
+        <!-- Navigation -->
+        <div style="text-align: center;">
+            <a href="index.html">⬅ Back to Home</a>
+        </div>
     </section>
 
 </body>
