@@ -1,0 +1,43 @@
+/* Element Selector */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* ID Selector */
+#mainHeader {
+    background-color: lightblue;
+    padding: 15px;
+}
+
+/* Class Selector */
+.content {
+    padding: 20px;
+}
+
+/* Background color section */
+.form-section {
+    background-color: #fff3cd;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Background image section */
+.payment-section {
+    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
+/* List Styling */
+.event-list, .payment-list {
+    color: darkslategray;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
